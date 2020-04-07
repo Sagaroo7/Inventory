@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.example.domain.ItemInfo" table="Item_Info">
+
+        <id name="itemInfoId" type="int" column="Item_Info_Id">
+<!--            If you need to provide ID then you have to write "assigned" -->
+            <generator class="native" />
+        </id>
+
+        <property name="manufacturedBy" type="java.lang.String">
+            <column name="Manufactured_By" length="30"/>
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="Description" length="50"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.example.domain.Item" table="Item">
+
+        <id name="itemId" type="int" column="Item_Id">
+<!--            If you need to provide ID then you have to write "assigned" -->
+            <generator class="identity"/>
+        </id>
+
+        <property name="name" type="java.lang.String">
+            <column name="Name" length="30"/>
+        </property>
+        <property name="price" type="java.lang.Float">
+            <column name="Price" length="10"/>
+        </property>
+
+<!--        <one-to-one name="itemInfo" class="com.example.domain.ItemInfo" />-->
+    </class>
+</hibernate-mapping>
